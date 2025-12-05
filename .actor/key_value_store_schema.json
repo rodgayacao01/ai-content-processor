@@ -1,0 +1,14 @@
+{
+    "title": "Key-Value Store Schema",
+    "type": "object",
+    "properties": {
+        "INPUT": {
+            "description": "The input configuration for the actor.",
+            "$ref": "./input_schema.json"
+        },
+        "OUTPUT": {
+            "description": "The output of the actor (if configured to save to KVS).",
+            "$ref": "./output_schema.json"
+        }
+    }
+}

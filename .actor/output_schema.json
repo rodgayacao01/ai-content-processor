@@ -1,0 +1,23 @@
+{
+    "title": "AI Content Processor API Output",
+    "type": "object",
+    "schema": {
+        "properties": {
+            "results": {
+                "type": "array",
+                "items": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "./dataset_schema.json#/schema"
+                    }
+                },
+                "description": "Batch results for the processed requests."
+            },
+            "total_processing_time_ms": {
+                "type": "number",
+                "description": "Total processing time for the batch."
+            }
+        },
+        "required": ["results", "total_processing_time_ms"]
+    }
+}

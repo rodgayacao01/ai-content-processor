@@ -1,0 +1,36 @@
+{
+    "title": "AI Content Processor Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "openai_api_key": {
+            "title": "OpenAI API Key",
+            "type": "string",
+            "description": "Your OpenAI API Key.",
+            "editor": "textfield",
+            "isSecret": true
+        },
+        "input_text": {
+            "title": "Input Text",
+            "type": "string",
+            "description": "Raw text input to process.",
+            "editor": "textarea",
+            "prefill": "Apify is a platform for web scraping and data extraction. It enables you to automate anything you can do manually in a web browser. With Apify Actors, you can extract data from any website, process it, and store it in a format of your choice. Actors are serverless cloud programs that can do anything from scraping a single page to crawling an entire website. The headquarters is located in Prague, Czech Republic. I love using Apify because it saves me so much time and the community is great!"
+        },
+        "tasks": {
+            "title": "Tasks",
+            "type": "array",
+            "description": "List of tasks to perform. Available options: summarization, translation, classification, ner, sentiment, note_generation, formatting, email_draft, marketing_copy, report_summary, normalize_content.",
+            "editor": "json",
+            "default": ["summarization"],
+            "prefill": ["summarization", "sentiment", "ner", "classification"]
+        },
+        "standby": {
+            "title": "Standby Mode",
+            "type": "boolean",
+            "description": "Run as a web server (Standby Mode).",
+            "default": false
+        }
+    },
+    "required": ["openai_api_key"]
+}

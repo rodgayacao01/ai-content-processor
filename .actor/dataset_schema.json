@@ -1,0 +1,50 @@
+{
+    "actorSpecification": 1,
+    "title": "AI Content Processor Dataset Item",
+    "fields": {
+        "type": "object",
+        "properties": {
+            "task": {
+                "type": "string",
+                "description": "The type of task performed (e.g., summarization, translation)."
+            },
+            "result": {
+                "description": "The result of the processing. Can be a string or an object depending on the task.",
+                "anyOf": [
+                    { "type": "string" },
+                    { "type": "object" }
+                ]
+            },
+            "processing_time_ms": {
+                "type": "number",
+                "description": "Time taken to process the task in milliseconds."
+            },
+            "status": {
+                "type": "string",
+                "description": "Status of the task (success or error)."
+            },
+            "error": {
+                "type": "string",
+                "description": "Error message if the task failed."
+            }
+        },
+        "required": ["task", "processing_time_ms", "status"]
+    },
+    "views": {
+        "overview": {
+            "title": "Overview",
+            "transformation": {
+                "fields": ["task", "status", "processing_time_ms", "error"]
+            },
+            "display": {
+                "component": "table",
+                "properties": {
+                    "task": { "label": "Task" },
+                    "status": { "label": "Status" },
+                    "processing_time_ms": { "label": "Time (ms)" },
+                    "error": { "label": "Error" }
+                }
+            }
+        }
+    }
+}

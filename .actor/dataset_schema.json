@@ -24,7 +24,7 @@
                 "description": "Status of the task (success or error)."
             },
             "error": {
-                "type": "string",
+                "type": ["string", "null"],
                 "description": "Error message if the task failed."
             }
         },

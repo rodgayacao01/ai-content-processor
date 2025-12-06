@@ -59,7 +59,7 @@ async def main():
                 # Serialize results for storage
                 serialized_results = []
                 for res in results:
-                    serialized_results.append(res.model_dump())
+                    serialized_results.append(res.model_dump(mode='json'))
                 
                 # Push results to dataset
                 await Actor.push_data(serialized_results)

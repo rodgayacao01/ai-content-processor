@@ -30,6 +30,15 @@ In this mode, the Actor starts a high-performance **FastAPI** server and listens
 
 ---
 
+## Pricing
+
+This Actor is priced based on the **Pay-per-event** model, ensuring you only pay for what you use.
+
+- **Price**: **$0.50 per 1,000 processed results**.
+- **Minimum**: No minimum usage.
+- **Compute**: Included in the price.
+- **AI Costs**: You provide your own OpenAI API Key, giving you full control over your model usage and costs.
+
 ## Features
 
 ### Core NLP Processing
